@@ -1,4 +1,15 @@
 Virgentech::Application.routes.draw do
+  # Home Page
+  root :to => "home#index"
+
+  # View Blog Entry
+  match "/blog/:year/:month/:url" => "blogs#view", 
+    :constraints => {
+      :year => /\d{4}/,
+      :month => /\d{2}/,
+      :url => /[a-zA-Z0-9-]+/
+    }
+
   resources :blogs
 
   # The priority is based upon order of creation:

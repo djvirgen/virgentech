@@ -14,9 +14,20 @@ class BlogsController < ApplicationController
   # GET /blogs/1.xml
   def show
     @blog = Blog.find(params[:id])
-
+    
     respond_to do |format|
       format.html # show.html.erb
+      format.xml  { render :xml => @blog }
+    end
+  end
+
+  # GET /blog/2011/03/my-blog-entry.html
+  # GET /blog/2011/03/my-blog-entry.xml
+  def view
+    @blog = Blog.find_published(params[:year], params[:month], params[:url])
+   
+    respond_to do |format|
+      format.html # view.html.erb
       format.xml  { render :xml => @blog }
     end
   end
