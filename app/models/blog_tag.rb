@@ -1,4 +1,4 @@
 class BlogTag < ActiveRecord::Base
-  has_many :blogs
-  has_many :tags
+  belongs_to :blog
+  belongs_to :tag
 end

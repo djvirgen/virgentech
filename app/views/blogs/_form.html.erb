@@ -1,4 +1,5 @@
-<%= form_for(@blog) do |f| %>
+<%= @blog.tags.join '' %>
+<%= form_for(@blog) do |blog_form| %>
   <% if @blog.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
@@ -12,26 +13,29 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
+    <%= blog_form.label :url %><br />
+    <%= blog_form.text_field :url %>
   </div>
   <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= blog_form.label :title %><br />
+    <%= blog_form.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :teaser %><br />
-    <%= f.text_field :teaser %>
+    <%= blog_form.label :teaser %><br />
+    <%= blog_form.text_field :teaser %>
   </div>
   <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_field :content %>
+    <%= blog_form.label :content %><br />
+    <%= blog_form.text_field :content %>
   </div>
   <div class="field">
-    <%= f.label :published %><br />
-    <%= f.datetime_select :published %>
+  
+  </div>
+  <div class="field">
+    <%= blog_form.label :published %><br />
+    <%= blog_form.datetime_select :published %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= blog_form.submit %>
   </div>
 <% end %>

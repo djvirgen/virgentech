@@ -1,4 +1,5 @@
 class Blog < ActiveRecord::Base
+  has_many :blog_tags
   has_many :tags, :through => :blog_tags
 
   def self.find_published(year, month, url)
