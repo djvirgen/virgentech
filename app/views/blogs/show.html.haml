@@ -1,0 +1,11 @@
+#blog.entry
+	%div[@blog]
+		%h1.title= @blog.title
+		%ul.details
+			%li.published
+				Published on
+				%span.publish-date= @blog.published
+		.content= @blog.content
+		%ul.actions
+			%li.edit= link_to 'Edit', edit_blog_path(@blog)
+			%li.back= link_to 'Back', blogs_path

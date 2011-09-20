@@ -1,0 +1,16 @@
+!!! 5
+%html
+	%head
+		%title Virgentech
+		= stylesheet_link_tag 'blueprint/screen', :media => 'screen, projection'
+		= stylesheet_link_tag 'blueprint/print', :media => 'print'
+		/[if lt IE 8]
+			= stylesheet_link_tag 'blueprint/ie', :media => 'screen, projection'
+		= javascript_include_tag :defaults
+		= csrf_meta_tag
+	%body.container
+		%header
+			= link_to 'Virgen Technologies', '/', :rel => 'home'
+		%section#content
+			= yield
+		%footer Copyright &copy; 2011 Hector Virgen. All rights reserved.
