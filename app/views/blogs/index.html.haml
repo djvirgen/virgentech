@@ -1,0 +1,10 @@
+%h1 Listing blogs
+%ol.blogs
+	- @blogs.each do |blog|
+		%li.blog
+			%h2= link_to blog.title, blog
+			.teaser= blog.teaser
+			%ul.actions
+				%li= link_to 'Edit', edit_blog_path(blog)
+				%li= link_to 'Destroy', blog, :confirm => 'Are you sure?', :method => :delete
+= link_to 'New Blog', new_blog_path
