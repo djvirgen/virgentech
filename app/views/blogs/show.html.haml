@@ -6,7 +6,9 @@
 			%li.published
 				Published on
 				%span.publish-date= @blog.published
-		.content= @blog.content
+		.content
+			:markdown
+				#{@blog.content}
 		%ul.actions
 			%li.action= link_to 'Edit', edit_blog_path(@blog)
 			%li.action= link_to 'Back', blogs_path

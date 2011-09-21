@@ -6,7 +6,9 @@
 	- @blogs.each do |blog|
 		%li.blog
 			%h2= link_to blog.title, blog
-			.teaser= blog.teaser
+			.teaser
+				:markdown
+					#{blog.teaser}
 			%ul.actions
 				%li.action= link_to 'Edit', edit_blog_path(blog)
 				%li.action= link_to 'Destroy', blog, :confirm => 'Are you sure?', :method => :delete

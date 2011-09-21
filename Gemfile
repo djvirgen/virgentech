@@ -13,6 +13,9 @@ gem 'haml'
 # Sass for CSS
 gem 'sass'
 
+# Markdown for blog
+gem 'rdiscount'
+
 # Pagination
 gem 'will_paginate', '~> 3.0.0'
 
