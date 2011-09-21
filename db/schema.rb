@@ -10,14 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110914165047) do
+ActiveRecord::Schema.define(:version => 20110921045824) do
 
   create_table "blogs", :force => true do |t|
     t.string   "url"
     t.string   "title"
     t.string   "teaser"
     t.string   "content"
-    t.datetime "published"
+    t.datetime "published_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

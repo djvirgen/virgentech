@@ -4,7 +4,7 @@
 	%li.action= link_to 'New Blog', new_blog_path
 %ol.blogs
 	- @blogs.each do |blog|
-		%li.blog
+		%li{:class => blog_class(blog)}
 			%h2= link_to blog.title, blog
 			.teaser
 				:markdown

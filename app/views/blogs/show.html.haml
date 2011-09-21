@@ -1,14 +1,13 @@
 - body_class 'blogs'
-#blog.entry
-	%div[@blog]
-		%h1.title= @blog.title
-		%ul.details
-			%li.published
-				Published on
-				%span.publish-date= @blog.published
-		.content
-			:markdown
-				#{@blog.content}
-		%ul.actions
-			%li.action= link_to 'Edit', edit_blog_path(@blog)
-			%li.action= link_to 'Back', blogs_path
+%div[@blog]{:class => blog_class(@blog)}
+	%h1.title= @blog.title
+	%ul.details
+		%li.published
+			Published on
+			%span.published_at= @blog.published_at
+	.content
+		:markdown
+			#{@blog.content}
+	%ul.actions
+		%li.action= link_to 'Edit', edit_blog_path(@blog)
+		%li.action= link_to 'Back', blogs_path

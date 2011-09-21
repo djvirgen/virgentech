@@ -2,7 +2,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.xml
   def index
-    @blogs = Blog.published.paginated(params[:page])
+    @blogs = Blog.paginated(params[:page])
 
     respond_to do |format|
       format.html
