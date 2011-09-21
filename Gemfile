@@ -19,6 +19,9 @@ gem 'rdiscount'
 # Pagination
 gem 'will_paginate', '~> 3.0.0'
 
+# Annotations
+gem 'annotate', '2.4.0'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: blogs
+#
+#  id           :integer         not null, primary key
+#  url          :string(255)
+#  title        :string(255)
+#  teaser       :string(255)
+#  content      :string(255)
+#  published_at :datetime
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+
 class Blog < ActiveRecord::Base
 	# Pagination
 	self.per_page = 10

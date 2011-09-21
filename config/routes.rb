@@ -1,4 +1,6 @@
 Virgentech::Application.routes.draw do
+  get "users/new"
+
   # Home Page
   root :to => "home#index"
 
