@@ -1,3 +1,4 @@
+- body_class 'blogs'
 #blog.entry
 	%div[@blog]
 		%h1.title= @blog.title
@@ -7,5 +8,5 @@
 				%span.publish-date= @blog.published
 		.content= @blog.content
 		%ul.actions
-			%li.edit= link_to 'Edit', edit_blog_path(@blog)
-			%li.back= link_to 'Back', blogs_path
+			%li.action= link_to 'Edit', edit_blog_path(@blog)
+			%li.action= link_to 'Back', blogs_path

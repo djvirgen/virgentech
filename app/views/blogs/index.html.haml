@@ -1,12 +1,13 @@
+- body_class 'blogs'
 %h1 Listing blogs
 %ul.actions
-	%li= link_to 'New Blog', new_blog_path
+	%li.action= link_to 'New Blog', new_blog_path
 %ol.blogs
 	- @blogs.each do |blog|
 		%li.blog
 			%h2= link_to blog.title, blog
 			.teaser= blog.teaser
 			%ul.actions
-				%li= link_to 'Edit', edit_blog_path(blog)
-				%li= link_to 'Destroy', blog, :confirm => 'Are you sure?', :method => :delete
+				%li.action= link_to 'Edit', edit_blog_path(blog)
+				%li.action= link_to 'Destroy', blog, :confirm => 'Are you sure?', :method => :delete
 = will_paginate @blogs

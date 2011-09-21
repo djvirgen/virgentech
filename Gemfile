@@ -10,6 +10,9 @@ gem 'sqlite3'
 # Haml for views
 gem 'haml'
 
+# Sass for CSS
+gem 'sass'
+
 # Pagination
 gem 'will_paginate', '~> 3.0.0'
 
