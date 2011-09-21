@@ -15,4 +15,6 @@
 			= link_to 'Virgen Technologies', '/', :rel => 'home'
 		%section#content
 			= yield
+		- if Rails.env.development?
+			.debug= debug(params)
 		%footer.global Copyright &copy; 2011 Hector Virgen. All rights reserved.
