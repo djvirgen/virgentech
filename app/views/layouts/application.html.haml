@@ -13,6 +13,12 @@
 		.foo= yield :body_class
 		%header.global
 			= link_to 'Virgen Technologies', '/', :rel => 'home'
+			%ul.user-controls
+				- if signed_in?
+					%li= link_to "Sign out", signout_path, :method => :delete
+				- else
+					%li= link_to "Sign in", signin_path
+					%li= link_to "Sign up", signup_path
 		%section#content
 			- flash.each do |key, value|
 				%div{:class => [flash, key]}
@@ -20,4 +26,4 @@
 			= yield
 		- if Rails.env.development?
 			.debug= debug(params)
-		%footer.global Copyright &copy; 2011 Hector Virgen. All rights reserved.
+		%footer.global.small Copyright &copy; 2011 Hector Virgen. All rights reserved.

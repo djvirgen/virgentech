@@ -7,16 +7,40 @@ a{
 header.global{
 	background: #36d;
 	height: 72px;
-	padding: 9px 18px;
+	padding: 9px 1em;
+	position: relative;
 
 	a {
 		color: #fff;
 		font-weight: bold;
 	}
+	
+	ul.user-controls{
+		position: absolute;
+		right: 1em;
+		bottom: 9px;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		
+		li {
+			float: left;
+			list-style-type: none;
+			margin: 0 0 0 1em;
+			padding: 0;
+		}
+	}
 }
 
 #content{
-	padding: 9px;
+	padding: 9px 1em;
+}
+
+footer.global{
+	padding: 9px 1em;
+	text-align: center;
+	background: #f2f4f6;
 }
 
 // Blog
