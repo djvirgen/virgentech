@@ -22,6 +22,9 @@ gem 'will_paginate', '~> 3.0.0'
 # Annotations
 gem 'annotate', '2.4.0'
 
+# Gravatar
+gem 'gravatar_image_tag', '1.0.0.pre2'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
