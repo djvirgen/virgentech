@@ -10,6 +10,9 @@ gem 'sqlite3'
 # Haml for views
 gem 'haml'
 
+# Pagination
+gem 'will_paginate', '~> 3.0.0'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

@@ -1,4 +1,6 @@
 %h1 Listing blogs
+%ul.actions
+	%li= link_to 'New Blog', new_blog_path
 %ol.blogs
 	- @blogs.each do |blog|
 		%li.blog
@@ -7,4 +9,4 @@
 			%ul.actions
 				%li= link_to 'Edit', edit_blog_path(blog)
 				%li= link_to 'Destroy', blog, :confirm => 'Are you sure?', :method => :delete
-= link_to 'New Blog', new_blog_path
+= will_paginate @blogs

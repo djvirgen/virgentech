@@ -1,4 +1,7 @@
 class Blog < ActiveRecord::Base
+	self.per_page = 10
+	
+	# Finds a single post based on published year/month and url
   def self.find_published(year, month, url)
     now = DateTime.now
 
@@ -16,4 +19,9 @@ class Blog < ActiveRecord::Base
 
     self.where(:url => url, :published => date_start..date_end).first
   end
+
+	# Returns a paginated collection based on the specified page
+	def self.paginated(page)
+		self.paginate(:page => page)
+	end
 end

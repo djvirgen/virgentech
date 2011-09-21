@@ -2,10 +2,10 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.xml
   def index
-    @blogs = Blog.all
+    @blogs = Blog.paginated(params[:page])
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.xml  { render :xml => @blogs }
     end
   end
@@ -16,7 +16,7 @@ class BlogsController < ApplicationController
     @blog = Blog.find(params[:id])
     
     respond_to do |format|
-      format.html # show.html.erb
+      format.html
       format.xml  { render :xml => @blog }
     end
   end
@@ -27,7 +27,7 @@ class BlogsController < ApplicationController
     @blog = Blog.find_published(params[:year], params[:month], params[:url])
    
     respond_to do |format|
-      format.html # view.html.erb
+      format.html
       format.xml  { render :xml => @blog }
     end
   end
@@ -38,7 +38,7 @@ class BlogsController < ApplicationController
     @blog = Blog.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html
       format.xml  { render :xml => @blog }
     end
   end
