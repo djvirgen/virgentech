@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110921061308) do
+ActiveRecord::Schema.define(:version => 20110922173241) do
 
   create_table "blogs", :force => true do |t|
     t.string   "url"
@@ -18,6 +18,13 @@ ActiveRecord::Schema.define(:version => 20110921061308) do
     t.string   "teaser"
     t.string   "content"
     t.datetime "published_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pages", :force => true do |t|
+    t.string   "url"
+    t.string   "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

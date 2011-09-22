@@ -15,10 +15,10 @@
 			= link_to 'Virgen Technologies', '/', :rel => 'home'
 			%ul.user-controls
 				- if signed_in?
-					%li= link_to "Sign out", signout_path, :method => :delete
+					%li= link_to "Log out", logout_path, :method => :delete
 				- else
-					%li= link_to "Sign in", signin_path
-					%li= link_to "Sign up", signup_path
+					%li= link_to "Log in", login_path
+					%li= link_to "Register", register_path
 		%section#content
 			- flash.each do |key, value|
 				%div{:class => [flash, key]}

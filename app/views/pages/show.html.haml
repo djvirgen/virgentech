@@ -1,0 +1,7 @@
+%p#notice= notice
+#page-content
+	:markdown
+		#{@page.content}
+%ul.actions
+	%li= link_to 'Edit', edit_page_path(@page)
+	%li= link_to 'Back', pages_path
