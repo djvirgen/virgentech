@@ -11,6 +11,11 @@ Virgentech::Application.routes.draw do
   match '/login',
   	:to => 'sessions#new',
   	:as => 'login'
+  	
+  # Blog
+  match '/blog',
+    :to => 'blogs#index',
+    :as => 'blog_index'
 
 	# Logout
   match '/logout',
